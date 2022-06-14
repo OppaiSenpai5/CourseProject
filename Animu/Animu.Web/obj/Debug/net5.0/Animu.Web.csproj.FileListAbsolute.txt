@@ -392,3 +392,5 @@ C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Animu.Web.d
 C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\ref\Animu.Web.dll
 C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Animu.Web.pdb
 C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Animu.Web.genruntimeconfig.cache
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\bin\Debug\net5.0\Animu.Data.dll
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\bin\Debug\net5.0\Animu.Data.pdb

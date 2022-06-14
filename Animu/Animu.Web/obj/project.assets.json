@@ -1857,6 +1857,23 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Animu.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.17",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
+          "Microsoft.AspNetCore.Identity.UI": "5.0.17",
+          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/Animu.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Animu.Data.dll": {}
+        }
       }
     }
   },
@@ -6707,10 +6724,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Animu.Data/1.0.0": {
+      "type": "project",
+      "path": "../Animu.Data/Animu.Data.csproj",
+      "msbuildProject": "../Animu.Data/Animu.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Animu.Data >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.17",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.17",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.17",
@@ -6750,7 +6773,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Ivan\\Desktop\\CourseProject\\Animu\\Animu.Data\\Animu.Data.csproj": {
+              "projectPath": "C:\\Users\\Ivan\\Desktop\\CourseProject\\Animu\\Animu.Data\\Animu.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
