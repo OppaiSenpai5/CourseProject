@@ -1,3 +1,5 @@
+using Animu.Service.Interfaces;
+using Animu.Service.Services;
 using Animu.Web.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,8 +34,13 @@ namespace Animu.Web
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
-                .AddEntityFrameworkStores<AnimuDbContext>();
+                    .AddEntityFrameworkStores<AnimuDbContext>();
+
             services.AddControllersWithViews();
+
+            services.AddTransient<IEpisodeService, EpisodeService>();
+            services.AddTransient<ITagService, TagService>();
+            services.AddTransient<IAnimeService, AnimeService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

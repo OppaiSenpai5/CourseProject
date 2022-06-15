@@ -1,6 +1,7 @@
 ﻿using Animu.Data.Entities;
 using Animu.Service.Interfaces;
 using Animu.Web.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,19 +12,15 @@ namespace Animu.Service.Services
 {
     public class AnimeService : BaseService<Anime>, IBaseService<Anime>, IAnimeService
     {
-        private readonly ITagAnimeService tagAnimeService;
-        public AnimeService(AnimuDbContext context, ITagAnimeService tagAnimeService) : base(context)
+        public AnimeService(AnimuDbContext context) : base(context)
         {
-            this.tagAnimeService = tagAnimeService;
         }
 
-        public IEnumerable<Anime> GetTagAnimes(Guid tagId)
-        {
-            IEnumerable<TagAnime> tagAnimes = this.tagAnimeService.GetByTagId(tagId);
-            return (from ta in tagAnimes
-                    join anime in GetAll()
-                    on ta.AnimeId equals anime.Id
-                    select anime).ToHashSet();
-        }
+        public IEnumerable<Anime> GetTagAnimes(Guid tagId) =>
+            this.context.TagAnimes
+                        .Include(ta => ta.Anime)
+                        .Where(ta => ta.TagId == tagId)
+                        .Select(ta => ta.Anime)
+                        .ToHashSet();
     }
 }

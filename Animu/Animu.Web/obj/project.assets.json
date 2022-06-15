@@ -2203,6 +2203,25 @@
         "runtime": {
           "bin/placeholder/Animu.Data.dll": {}
         }
+      },
+      "Animu.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Animu.Data": "1.0.0",
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.17",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
+          "Microsoft.AspNetCore.Identity.UI": "5.0.17",
+          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2"
+        },
+        "compile": {
+          "bin/placeholder/Animu.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Animu.Service.dll": {}
+        }
       }
     }
   },
@@ -7602,11 +7621,17 @@
       "type": "project",
       "path": "../Animu.Data/Animu.Data.csproj",
       "msbuildProject": "../Animu.Data/Animu.Data.csproj"
+    },
+    "Animu.Service/1.0.0": {
+      "type": "project",
+      "path": "../Animu.Service/Animu.Service.csproj",
+      "msbuildProject": "../Animu.Service/Animu.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Animu.Data >= 1.0.0",
+      "Animu.Service >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.17",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.17",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.17",
@@ -7650,6 +7675,9 @@
           "projectReferences": {
             "C:\\Users\\Ivan\\Desktop\\CourseProject\\Animu\\Animu.Data\\Animu.Data.csproj": {
               "projectPath": "C:\\Users\\Ivan\\Desktop\\CourseProject\\Animu\\Animu.Data\\Animu.Data.csproj"
+            },
+            "C:\\Users\\Ivan\\Desktop\\CourseProject\\Animu\\Animu.Service\\Animu.Service.csproj": {
+              "projectPath": "C:\\Users\\Ivan\\Desktop\\CourseProject\\Animu\\Animu.Service\\Animu.Service.csproj"
             }
           }
         }

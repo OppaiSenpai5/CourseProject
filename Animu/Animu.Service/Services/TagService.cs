@@ -12,19 +12,15 @@ namespace Animu.Service.Services
 {
     public class TagService : BaseService<Tag>, IBaseService<Tag>, ITagService
     {
-        private readonly ITagAnimeService tagAnimeService;
-        public TagService(AnimuDbContext context, ITagAnimeService tagAnimeService) : base(context)
+        public TagService(AnimuDbContext context) : base(context)
         {
-            this.tagAnimeService = tagAnimeService;
         }
 
-        public IEnumerable<Tag> GetAnimeTags(Guid animeId)
-        {
-            IEnumerable<TagAnime> tagAnimes = this.tagAnimeService.GetByAnimeId(animeId);
-            return (from ta in tagAnimes
-                    join tag in GetAll()
-                    on ta.TagId equals tag.Id
-                    select tag).ToHashSet();
-        }
+        public IEnumerable<Tag> GetAnimeTags(Guid animeId) =>
+            this.context.TagAnimes
+                        .Include(ta => ta.Tag)
+                        .Where(ta => ta.AnimeId == animeId)
+                        .Select(ta => ta.Tag)
+                        .ToHashSet();
     }
 }
