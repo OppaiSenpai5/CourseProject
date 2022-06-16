@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Animu.Data\Animu.Data.csproj" />
+    <ProjectReference Include="..\Animu.Service\Animu.Service.csproj" />
   </ItemGroup>
 
 </Project>

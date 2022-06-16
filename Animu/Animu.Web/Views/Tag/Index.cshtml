@@ -1,0 +1,22 @@
+﻿@model IEnumerable<TagVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<a class="btn btn-primary mb-5" asp-action="Create">Add New Tag</a>
+
+<ul class="list-group">
+    @foreach (var tag in Model)
+     {
+        <li class="list-group-item">
+            @tag.Name
+            <div class="btn-group float-right">
+                <a class="btn btn-success" asp-action="Edit" asp-route-id="@tag.Id">Edit</a>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@tag.Id">Delete</a>
+            </div>
+        </li>
+     }
+</ul>

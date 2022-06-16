@@ -34,6 +34,7 @@
       "Animu.Web/1.0.0": {
         "dependencies": {
           "Animu.Data": "1.0.0",
+          "Animu.Service": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.17",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
           "Microsoft.AspNetCore.Identity.UI": "5.0.17",
@@ -1999,6 +2000,23 @@
         },
         "compile": {
           "Animu.Data.dll": {}
+        }
+      },
+      "Animu.Service/1.0.0": {
+        "dependencies": {
+          "Animu.Data": "1.0.0",
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.17",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
+          "Microsoft.AspNetCore.Identity.UI": "5.0.17",
+          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2"
+        },
+        "runtime": {
+          "Animu.Service.dll": {}
+        },
+        "compile": {
+          "Animu.Service.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -4618,6 +4636,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "Animu.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Animu.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

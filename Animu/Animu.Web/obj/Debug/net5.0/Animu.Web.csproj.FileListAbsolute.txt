@@ -443,3 +443,8 @@ C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Areas
 C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\bin\Debug\net5.0\Animu.Service.dll
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\bin\Debug\net5.0\Animu.Service.pdb
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Tag\Index.cshtml.g.cs
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Tag\Create.cshtml.g.cs
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Tag\Edit.cshtml.g.cs
