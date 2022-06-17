@@ -448,3 +448,7 @@ C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\bin\Debug\net5.0\Animu.Servi
 C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Tag\Index.cshtml.g.cs
 C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Tag\Create.cshtml.g.cs
 C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Tag\Edit.cshtml.g.cs
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Anime\Index.cshtml.g.cs
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Anime\Create.cshtml.g.cs
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Anime\Edit.cshtml.g.cs
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Anime\Details.cshtml.g.cs

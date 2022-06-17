@@ -34,7 +34,7 @@ namespace Animu.Web.Controllers
         public IActionResult Index()
         {
             IEnumerable<TagVM> modelList =
-                this.tagService.GetAll().Select(t => EntityToModel(t));
+                this.tagService.GetAll().Select(t => new TagVM(t));
 
             return View(modelList);
         }
@@ -50,7 +50,7 @@ namespace Animu.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                Tag tag = ModelToEntity(model);
+                Tag tag = model.ToTag();
                 this.tagService.Create(tag);
 
                 return RedirectToAction(nameof(Index));
@@ -73,7 +73,7 @@ namespace Animu.Web.Controllers
                 return NotFound();
             }
 
-            TagVM model = EntityToModel(tag);
+            TagVM model = new TagVM(tag);
             return View(model);
 
         }
@@ -83,7 +83,7 @@ namespace Animu.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                Tag tag = ModelToEntity(model);
+                Tag tag = model.ToTag();
                 this.tagService.Update(tag);
 
                 return RedirectToAction(nameof(Index));
@@ -107,28 +107,6 @@ namespace Animu.Web.Controllers
 
             this.tagService.Delete(tag);
             return RedirectToAction(nameof(Index));
-        }
-
-        private static Tag ModelToEntity(TagVM model)
-        {
-            Tag tag = new Tag()
-            {
-                Id = model.Id,
-                Name = model.Name
-            };
-
-            return tag;
-        }
-
-        private static TagVM EntityToModel(Tag tag)
-        {
-            TagVM model = new TagVM()
-            {
-                Id = tag.Id,
-                Name = tag.Name
-            };
-
-            return model;
         }
     }
 }

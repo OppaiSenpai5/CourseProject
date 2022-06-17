@@ -1,0 +1,26 @@
+﻿@model IEnumerable<AnimeListVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<a class="btn btn-primary mb-5" asp-action="Create">Add New Anime</a>
+
+<div class="card-group">
+    @foreach (var anime in Model)
+     {
+        <div class="card">
+            <img class="card-img-top" src="@anime.ImageUrl" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@anime.Title</h5>
+                <p class="card-text text-truncate">@anime.Synopsis</p>
+                <div class="btn-group w-100">
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@anime.Id">Edit</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@anime.Id">Delete</a>
+                </div>
+            </div>
+        </div>
+     }
+</div>

@@ -1,0 +1,25 @@
+﻿@model AnimeDetailsVM
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="card mb-3"">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="@Model.ImageUrl" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h3 class="card-title">@Model.Title</h3>
+                @foreach (var tag in Model.Tags)
+                 {
+                    <a href="#" class="badge badge-secondary">@tag.Name</a>
+                 }
+                <p class="card-text">@Model.Synopsis</p>
+            </div>
+        </div>
+    </div>
+</div>
