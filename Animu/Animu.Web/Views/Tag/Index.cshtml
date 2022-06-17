@@ -12,7 +12,7 @@
     @foreach (var tag in Model)
      {
         <li class="list-group-item">
-            @tag.Name
+            <a class="btn" asp-controller="Anime" asp-action="AnimeWithTag" asp-route-tagId="@tag.Id">@tag.Name</a>
             <div class="btn-group float-right">
                 <a class="btn btn-success" asp-action="Edit" asp-route-id="@tag.Id">Edit</a>
                 <a class="btn btn-danger" asp-action="Delete" asp-route-id="@tag.Id">Delete</a>

@@ -40,6 +40,25 @@ namespace Animu.Web.Controllers
         }
 
         [HttpGet]
+        public IActionResult AnimeWithTag(Guid? tagId)
+        {
+            if (!tagId.HasValue)
+            {
+                return NotFound();
+            }
+
+            var tag = this.tagService.Get(tagId.Value);
+            var animes = this.animeService.GetTagAnimes(tagId.Value);
+            if (tag is null || animes is null)
+            {
+                return NotFound();
+            }
+
+            TagAnimeVM model = new TagAnimeVM(tag, animes);
+            return View(model);
+        }
+
+        [HttpGet]
         public IActionResult Create()
         {
             ViewBag.Tags = this.tagService.GetAll();
@@ -83,11 +102,12 @@ namespace Animu.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(AnimeListVM model)
+        public IActionResult Edit(IFormCollection collection, AnimeListVM model)
         {
             if (ModelState.IsValid)
             {
                 Anime anime = model.ToAnime();
+                anime.TagAnimes = ParseTagIds(collection["tags"], anime.Id);
                 this.animeService.Update(anime);
 
                 return RedirectToAction(nameof(Index));
@@ -131,6 +151,9 @@ namespace Animu.Web.Controllers
                              .GetAnimeTags(anime.Id)
                              .Select(t => new TagVM(t))
                              .ToHashSet();
+            model.Episodes = this.episodeService
+                                 .GetAnimeEpisodes(model.Id)
+                                 .ToHashSet();
 
             return View(model);
             

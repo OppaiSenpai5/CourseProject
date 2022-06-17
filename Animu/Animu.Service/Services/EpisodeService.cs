@@ -16,6 +16,9 @@ namespace Animu.Service.Services
         }
 
         public IEnumerable<Episode> GetAnimeEpisodes(Guid animeId) =>
-            this.dbSet.Where(e => e.AnimeId == animeId).ToHashSet();
+            this.dbSet
+                .Where(e => e.AnimeId == animeId)
+                .OrderBy(e => e.Number)
+                .ToHashSet();
     }
 }

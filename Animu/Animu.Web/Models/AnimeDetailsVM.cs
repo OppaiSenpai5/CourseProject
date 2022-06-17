@@ -19,6 +19,7 @@ namespace Animu.Web.Models
         [Required]
         public string Synopsis { get; set; }
         public ICollection<TagVM> Tags { get; set; }
+        public ICollection<Episode> Episodes { get; set; }
 
         public AnimeDetailsVM()
         {

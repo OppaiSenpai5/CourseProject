@@ -1,0 +1,29 @@
+﻿@model Episode
+
+@{
+    ViewData["Title"] = "Watch";
+}
+
+@{ 
+    string Highlighted(Guid id)
+    {
+        return id == Model.Id ? "btn-primary" : "btn-secondary";
+    }
+
+    var episodes = Model.Anime.Episodes.OrderBy(e => e.Number);
+}
+
+<h1>@Model.Anime.Title: @Model.Title</h1>
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="@Model.VideoUrl" allowfullscreen></iframe>
+</div>
+
+
+<div class="btn-group mr-2" role="group" aria-label="First group">
+    @foreach (var episode in episodes)
+    {
+        <button onclick="location.href = './@episode.Id'" type="button" class="btn @Highlighted(episode.Id)" asp-route="@episode.Id">@episode.Number</button>
+    }
+
+</div>

@@ -452,3 +452,7 @@ C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views
 C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Anime\Create.cshtml.g.cs
 C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Anime\Edit.cshtml.g.cs
 C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Anime\Details.cshtml.g.cs
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Anime\AnimeWithTag.cshtml.g.cs
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Episode\Create.cshtml.g.cs
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Episode\Edit.cshtml.g.cs
+C:\Users\Ivan\Desktop\CourseProject\Animu\Animu.Web\obj\Debug\net5.0\Razor\Views\Episode\Watch.cshtml.g.cs

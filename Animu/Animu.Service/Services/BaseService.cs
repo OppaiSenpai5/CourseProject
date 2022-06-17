@@ -20,23 +20,23 @@ namespace Animu.Service.Services
             this.dbSet = this.context.Set<T>();
         }
 
-        public IEnumerable<T> GetAll() => this.dbSet.ToHashSet();
+        public virtual IEnumerable<T> GetAll() => this.dbSet.ToHashSet();
 
-        public T Get(Guid id) => this.dbSet.Find(id);
+        public virtual T Get(Guid id) => this.dbSet.Find(id);
 
-        public void Create(T entity)
+        public virtual void Create(T entity)
         {
             this.dbSet.Add(entity);
             this.context.SaveChanges();
         }
 
-        public void Update(T entity)
+        public virtual void Update(T entity)
         {
             this.dbSet.Update(entity);
             this.context.SaveChanges();
         }
 
-        public void Delete(T entity)
+        public virtual void Delete(T entity)
         {
             this.dbSet.Remove(entity);
             this.context.SaveChanges();

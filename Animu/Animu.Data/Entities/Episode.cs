@@ -19,5 +19,10 @@ namespace Animu.Data.Entities
         [Required]
         public Guid AnimeId { get; set; }
         public Anime Anime { get; set; }
+
+        public Episode()
+        {
+            this.Id = Guid.NewGuid();
+        }
     }
 }

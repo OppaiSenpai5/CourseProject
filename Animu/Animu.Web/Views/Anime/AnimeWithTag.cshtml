@@ -1,16 +1,14 @@
-﻿@model IEnumerable<AnimeListVM>
+﻿@model TagAnimeVM 
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "AnimeWithTag";
 }
 
-<h1>Index</h1>
-
-<a class="btn btn-primary mb-5" asp-action="Create">Add New Anime</a>
+<h1>@Model.TagName Animes</h1>
 
 <div class="card-group">
-    @foreach (var anime in Model)
-     {
+    @foreach (var anime in Model.Animes)
+    {
         <div class="card">
             <a asp-action="Details" asp-route-id="@anime.Id">
                 <img class="card-img-top" src="@anime.ImageUrl" alt="Card image cap">
@@ -24,5 +22,5 @@
                 </div>
             </div>
         </div>
-     }
+    }
 </div>
