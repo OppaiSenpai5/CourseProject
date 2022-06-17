@@ -8,19 +8,21 @@
 
 <div class="card-group">
     @foreach (var anime in Model.Animes)
-    {
-        <div class="card">
-            <a asp-action="Details" asp-route-id="@anime.Id">
-                <img class="card-img-top" src="@anime.ImageUrl" alt="Card image cap">
-            </a>
-            <div class="card-body">
-                <h5 class="card-title">@anime.Title</h5>
-                <p class="card-text text-truncate">@anime.Synopsis</p>
-                <div class="btn-group w-100">
-                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@anime.Id">Edit</a>
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@anime.Id">Delete</a>
+     {
+        <div class="container w-25 m-0 p-0">
+            <div class="card h-100">
+                <a asp-action="Details" asp-route-id="@anime.Id">
+                    <img class="card-img-top" src="@anime.ImageUrl" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">@anime.Title</h5>
+                    <p class="card-text text-truncate">@anime.Synopsis</p>
+                    <div class="btn-group w-100">
+                        <a class="btn btn-success" asp-action="Edit" asp-route-id="@anime.Id">Edit</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@anime.Id">Delete</a>
+                    </div>
                 </div>
             </div>
         </div>
-    }
+     }
 </div>

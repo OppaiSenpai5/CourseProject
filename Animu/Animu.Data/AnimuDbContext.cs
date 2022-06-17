@@ -1,4 +1,6 @@
 ﻿using Animu.Data.Entities;
+using Animu.Data.Seeder;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -40,6 +42,14 @@ namespace Animu.Web.Data
                    .HasOne(ta => ta.Anime)
                    .WithMany(a => a.TagAnimes)
                    .HasForeignKey(ta => ta.AnimeId);
+
+            builder.Entity<Episode>().HasData(Seeder.EpisodesSeed());
+            builder.Entity<Anime>().HasData(Seeder.AnimesSeed());
+            builder.Entity<Tag>().HasData(Seeder.TagsSeed());
+            builder.Entity<TagAnime>().HasData(Seeder.TagAnimesSeed());
+            builder.Entity<IdentityUser>().HasData(Seeder.UsersSeed());
+            builder.Entity<IdentityRole>().HasData(Seeder.RolesSeed());
+            builder.Entity<IdentityUserRole<string>>().HasData(Seeder.UserRolesSeed());
         }
     }
 }
